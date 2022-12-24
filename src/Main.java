@@ -1,20 +1,41 @@
-
 public class Main {
     public static void main(String[] args) {
-        threeParams(3,2, 1);
-        Coche miCoche = new Coche();
-        miCoche.masPuertas();
-        System.out.println(miCoche.puertas);
-    }
-    public static void threeParams(int a, int b, int c){
-        System.out.println("a is equal to: " + a);
-        System.out.println("b is equal to: " + b);
-        System.out.println("c is equal to: " + c);
+
+        Persona person1 = new Persona();
+
+        person1.setNombre("Nicolas");
+        person1.setEdad(25);
+        person1.setTelefono(356461112);
+        System.out.println(person1.getEdad());
+        System.out.println(person1.getNombre());
+        System.out.println(person1.getTelefono());
     }
 }
-class Coche{
-    public int puertas = 0;
-    public void masPuertas(){
-        this.puertas++;
+class Persona{
+    private int edad;
+    private String nombre;
+    private int telefono;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public int getTelefono() {
+        return telefono;
     }
 }
